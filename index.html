@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Flower Station · Preórdenes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================================================== -->
+<!-- BARRA SUPERIOR -->
+<!-- ===================================================== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="34" height="34"><circle cx="20" cy="20" r="18" fill="none" stroke="var(--pink)" stroke-width="3"/><path d="M12 22c2-6 6-10 8-10s6 4 8 10" fill="none" stroke="var(--green-ink)" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand-name">flower <em>station</em></span>
+    </div>
+    <nav class="topnav">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#pedido">Mi pedido</a>
+    </nav>
+    <button class="cart-pill" id="openCartBtn" aria-label="Ver pedido">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L22 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/></svg>
+      <span id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================================================== -->
+<!-- HERO -->
+<!-- ===================================================== -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">Feria de emprendimiento · Preórdenes abiertas</p>
+    <h1>Flores que no se marchitan,<br>hechas con amor.</h1>
+    <p class="hero-sub">Llaveros, macetas y ramos de limpiapipas armados a mano.
+      Elige lo que quieras, reserva tu pedido y solo pasa a recogerlo
+      el día de la feria. Nada de filas, nada de sorpresas.</p>
+    <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 320 320" class="hero-flower">
+      <line x1="160" y1="160" x2="160" y2="300" stroke="var(--green)" stroke-width="6" stroke-linecap="round"/>
+      <g stroke-width="10" stroke-linecap="round" fill="none">
+        <path d="M160 160 C120 120 120 70 160 40" stroke="var(--pink)"/>
+        <path d="M160 160 C200 120 200 70 160 40" stroke="var(--yellow)"/>
+        <path d="M160 160 C110 160 70 130 60 90" stroke="var(--blue)"/>
+        <path d="M160 160 C210 160 250 130 260 90" stroke="var(--pink)"/>
+        <path d="M160 160 C110 170 70 200 55 235" stroke="var(--yellow)"/>
+        <path d="M160 160 C210 170 250 200 265 235" stroke="var(--blue)"/>
+      </g>
+      <circle cx="160" cy="160" r="14" fill="var(--green-ink)"/>
+    </svg>
+  </div>
+</section>
+
+<div class="squiggle-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 Q 25 0, 50 20 T 100 20 T 150 20 T 200 20 T 250 20 T 300 20 T 350 20 T 400 20 T 450 20 T 500 20 T 550 20 T 600 20 T 650 20 T 700 20 T 750 20 T 800 20 T 850 20 T 900 20 T 950 20 T 1000 20 T 1050 20 T 1100 20 T 1150 20 T 1200 20" fill="none" stroke="var(--pink)" stroke-width="4"/></svg>
+</div>
+
+<!-- ===================================================== -->
+<!-- CATÁLOGO -->
+<!-- ===================================================== -->
+<main id="catalogo" class="catalog-section">
+  <div class="section-head">
+    <h2>Catálogo</h2>
+    <p>Ajusta cantidades y agrega a tu pedido. Precios en pesos colombianos (COP).</p>
+  </div>
+
+  <div class="category-tabs" id="categoryTabs" role="tablist"></div>
+  <div id="productGrid" class="product-grid"></div>
+</main>
+
+<div class="squiggle-divider flip" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 Q 25 0, 50 20 T 100 20 T 150 20 T 200 20 T 250 20 T 300 20 T 350 20 T 400 20 T 450 20 T 500 20 T 550 20 T 600 20 T 650 20 T 700 20 T 750 20 T 800 20 T 850 20 T 900 20 T 950 20 T 1000 20 T 1050 20 T 1100 20 T 1150 20 T 1200 20" fill="none" stroke="var(--blue)" stroke-width="4"/></svg>
+</div>
+
+<!-- ===================================================== -->
+<!-- FORMULARIO DE PEDIDO -->
+<!-- ===================================================== -->
+<section id="pedido" class="order-section">
+  <div class="section-head">
+    <h2>Tu pedido</h2>
+    <p>Revisa lo que elegiste, completa tus datos y confírmalo por WhatsApp.</p>
+  </div>
+
+  <div class="order-layout">
+    <div class="order-summary" id="orderSummary">
+      <p class="empty-state">Todavía no has agregado nada. Vuelve al catálogo y elige tus favoritos 🌼</p>
+    </div>
+
+    <form class="order-form" id="orderForm">
+      <label>
+        Nombre completo
+        <input type="text" id="buyerName" required placeholder="¿Cómo te llamas?">
+      </label>
+      <label>
+        Número de celular
+        <input type="tel" id="buyerPhone" required placeholder="300 000 0000">
+      </label>
+      <label>
+        ¿Cómo prefieres recibirlo?
+        <select id="deliveryMethod">
+          <option value="Recoger en la feria">Recoger en la feria</option>
+          <option value="Coordinar entrega">Coordinar entrega aparte</option>
+        </select>
+      </label>
+      <label>
+        Notas para el pedido (opcional)
+        <textarea id="buyerNotes" rows="2" placeholder="Color favorito, dedicatoria, etc."></textarea>
+      </label>
+
+      <div class="order-total">
+        <span>Total</span>
+        <strong id="orderTotal">$0</strong>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full" id="submitOrderBtn" disabled>
+        Confirmar pedido
+      </button>
+      <p class="form-note">Al confirmar, tu pedido queda registrado. Te contactaremos para coordinar la entrega.</p>
+    </form>
+
+    <div class="order-success" id="orderSuccess" hidden>
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <h3>¡Pedido recibido!</h3>
+      <p>Gracias<span id="successName"></span>, ya guardamos tu pedido. Te contactaremos pronto para coordinar la entrega en la feria.</p>
+      <button type="button" class="btn btn-primary" id="newOrderBtn">Hacer otro pedido</button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p><strong>Flower Station</strong> · Flores que no se marchitan, hechas con amor</p>
+  <p id="fairInfoFooter"></p>
+</footer>
+
+<!-- Panel lateral del carrito -->
+<div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+  <div class="cart-drawer-head">
+    <h3>Mi pedido</h3>
+    <button id="closeCartBtn" aria-label="Cerrar">✕</button>
+  </div>
+  <div class="cart-drawer-body" id="cartDrawerBody"></div>
+  <div class="cart-drawer-foot">
+    <div class="order-total">
+      <span>Total</span>
+      <strong id="drawerTotal">$0</strong>
+    </div>
+    <a href="#pedido" class="btn btn-primary btn-full" id="goToOrderBtn">Ir a confirmar</a>
+  </div>
+</div>
+<div class="cart-backdrop" id="cartBackdrop"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
