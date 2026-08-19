@@ -1,11 +1,4 @@
-/* =========================================================
-   CONFIGURACIÓN — esto es lo único que normalmente necesitas
-   editar. Todo lo demás de este archivo ya funciona solo.
-   ========================================================= */
 
-// URL de tu Google Apps Script publicado como Web App.
-// La consigues siguiendo los pasos de LEEME.md. Mientras la pegas,
-// el formulario mostrará un aviso de error al enviar.
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHssw7zGKrLtZOlILHTUkQJgk551w5SQ9cIG9iONlcEAhjAlRgf8mtfrhjvi_QcGtu/exec";
 
 // Texto que aparece en el pie de página con los datos de la feria.
@@ -14,7 +7,7 @@ const FAIR_INFO = "Feria de emprendimiento · Fecha y lugar por confirmar";
 // Catálogo de productos. Agrega, edita o borra los que quieras.
 // "icon" es un color de fondo para la tarjeta (no necesitas fotos).
 const PRODUCTS = [
-   {
+ {
     id: "llav-1",
     category: "Llaveros",
     name: "Llavero rosa",
@@ -61,12 +54,20 @@ const PRODUCTS = [
     desc: "Doce flores, perfectas para quien mas amas",
     price: 20000,
     color: "var(--blue)"
+  },
+  {
+    id: "Flor Individual",
+    category: "Ramos de flores",
+    name: "Flor Individual",
+    desc: " Tulipanes, Rosa, Lirio o Hibicus",
+    price: 10000,
+    color: "var(--blue)"
   }
+
+  
 ];
 
-/* =========================================================
-   A partir de aquí ya no necesitas tocar nada.
-   ========================================================= */
+
 
 const money = (n) => "$" + n.toLocaleString("es-CO");
 
