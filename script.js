@@ -83,7 +83,7 @@ const PRODUCTS = [
     id: "flor-individual",
     category: "Ramos de flores",
     name: "Flor Individual",
-    desc: "Tulipanes, Rosa, Lirio o Hibicus (naranja)",
+    desc: "Tulipanes, Rosa, Lirio o Hibicus (Azul claro, Rojo, Rosado, Morado, naranja)",
     price: 10000,
     image: "Flor individual.jpg",
     color: "var(--blue)"
