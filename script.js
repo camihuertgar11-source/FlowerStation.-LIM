@@ -1,4 +1,3 @@
-
 /* =========================================================
    CONFIGURACIÓN — esto es lo único que normalmente necesitas
    editar. Todo lo demás de este archivo ya funciona solo.
@@ -18,7 +17,7 @@ const PRODUCTS = [
     id: "llav-1",
     category: "Llaveros",
     name: "Llavero rosa",
-    desc: "Una flor de limpiapipas perfecta para llevar a todos lados."
+    desc: "Una flor de limpiapipas perfecta para llevar a todos lados.",
     price: 4000,
     image: "Llavero rosa.jpg",
     color: "var(--pink)"
@@ -54,7 +53,7 @@ const PRODUCTS = [
     id: "ramo-1",
     category: "Ramos de flores",
     name: "Ramo pequeño (8 flores)",
-    desc: "Ocho flores de limpiapipas envueltas y listas para regalar.(Azul claro, Rosado, Rojo, Morado, mix)",
+    desc: "Ocho flores de limpiapipas envueltas y listas para regalar.",
     price: 17000,
     image: "Ramo.jpg",
     color: "var(--pink)"
@@ -63,7 +62,7 @@ const PRODUCTS = [
     id: "ramo-2",
     category: "Ramos de flores",
     name: "Ramo grande (10 flores)",
-    desc: "Diez flores, envoltura y moño incluidos.(Azul claro, Rosado, Rojo, Morado, mix)",
+    desc: "Diez flores, envoltura y moño incluidos.",
     price: 22000,
     image: "Ramo 2.jpg",
     color: "var(--yellow)"
@@ -72,7 +71,7 @@ const PRODUCTS = [
     id: "ramo-3",
     category: "Ramos de flores",
     name: "Ramo grande (12 flores)",
-    desc: "Doce flores, perfectas para quien mas amas(Azul claro, Rosado, Rojo, Morado, mix)",
+    desc: "Doce flores, perfectas para quien mas amas",
     price: 26000,
     image: "Ramo 1.jpg",
     color: "var(--blue)"
@@ -81,7 +80,7 @@ const PRODUCTS = [
     id: "flor-individual",
     category: "Ramos de flores",
     name: "Flor Individual",
-    desc: "Tulipanes, Rosa, Lirio o Hibicus (Azul claro, Rosado, Rojo, Morado, Naranja, Vinotinto)",
+    desc: "Tulipanes, Rosa, Lirio o Hibicus",
     price: 10000,
     image: "Flor individual.jpg",
     color: "var(--blue)"
