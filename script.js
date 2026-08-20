@@ -10,8 +10,8 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHssw7zGKrLt
 const FAIR_INFO = "Feria de emprendimiento · Fecha y lugar por confirmar";
 
 // Catálogo de productos. Agrega, edita o borra los que quieras.
-// "image" es el nombre del archivo de foto (debe estar en la carpeta
-// "imagenes/", junto a index.html). Si lo borras o no se encuentra el
+// "image" es el nombre del archivo de foto (debe estar en la misma
+// carpeta que index.html). Si lo borras o no se encuentra el
 // archivo, se muestra un ícono dibujado en su lugar.
 const PRODUCTS = [
   {
@@ -20,7 +20,7 @@ const PRODUCTS = [
     name: "Llavero rosa",
     desc: "Una flor de limpiapipas perfecta para llevar a todos lados.",
     price: 3000,
-    image: "imagenes/Llavero rosa.jpg",
+    image: "Llavero rosa.jpg",
     color: "var(--pink)"
   },
   {
@@ -29,7 +29,7 @@ const PRODUCTS = [
     name: "Llavero girasol",
     desc: "Hermoso llavero de girasol hecho con limpiapipas y para todos",
     price: 5000,
-    image: "imagenes/Llavero Girasol.jpg",
+    image: "Llavero Girasol.jpg",
     color: "var(--yellow)"
   },
   {
@@ -38,7 +38,7 @@ const PRODUCTS = [
     name: "Llavero margarita",
     desc: "Una margarita muy colorida para llevar a todas partes",
     price: 5000,
-    image: "imagenes/Llavero margaritas.jpg",
+    image: "Llavero margaritas.jpg",
     color: "var(--yellow)"
   },
   {
@@ -47,7 +47,7 @@ const PRODUCTS = [
     name: "Caja plastica con girasol",
     desc: "Cajita plastica con un hermoso Girasol en su maceta",
     price: 22000,
-    image: "imagenes/Caja Plastica de Girasol.jpg",
+    image: "Caja Plastica de Girasol.jpg",
     color: "var(--blue)"
   },
   {
@@ -56,7 +56,7 @@ const PRODUCTS = [
     name: "Ramo pequeño (8 flores)",
     desc: "Ocho flores de limpiapipas envueltas y listas para regalar.",
     price: 12000,
-    image: "imagenes/Ramo.jpg",
+    image: "Ramo.jpg",
     color: "var(--pink)"
   },
   {
@@ -65,7 +65,7 @@ const PRODUCTS = [
     name: "Ramo grande (10 flores)",
     desc: "Diez flores, envoltura y moño incluidos.",
     price: 15000,
-    image: "imagenes/Ramo 2.jpg",
+    image: "Ramo 2.jpg",
     color: "var(--yellow)"
   },
   {
@@ -74,7 +74,7 @@ const PRODUCTS = [
     name: "Ramo grande (12 flores)",
     desc: "Doce flores, perfectas para quien mas amas",
     price: 20000,
-    image: "imagenes/Ramo 1.jpg",
+    image: "Ramo 1.jpg",
     color: "var(--blue)"
   },
   {
@@ -83,7 +83,7 @@ const PRODUCTS = [
     name: "Flor Individual",
     desc: "Tulipanes, Rosa, Lirio o Hibicus",
     price: 10000,
-    image: "imagenes/Flor individual.jpg",
+    image: "Flor individual.jpg",
     color: "var(--blue)"
   }
 ];
