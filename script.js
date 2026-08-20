@@ -1,18 +1,26 @@
 
+/* =========================================================
+   CONFIGURACIÓN — esto es lo único que normalmente necesitas
+   editar. Todo lo demás de este archivo ya funciona solo.
+   ========================================================= */
+
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHssw7zGKrLtZOlILHTUkQJgk551w5SQ9cIG9iONlcEAhjAlRgf8mtfrhjvi_QcGtu/exec";
 
 // Texto que aparece en el pie de página con los datos de la feria.
 const FAIR_INFO = "Feria de emprendimiento · Fecha y lugar por confirmar";
 
 // Catálogo de productos. Agrega, edita o borra los que quieras.
-// "icon" es un color de fondo para la tarjeta (no necesitas fotos).
+// "image" es el nombre del archivo de foto (debe estar en la carpeta
+// "imagenes/", junto a index.html). Si lo borras o no se encuentra el
+// archivo, se muestra un ícono dibujado en su lugar.
 const PRODUCTS = [
- {
+  {
     id: "llav-1",
     category: "Llaveros",
     name: "Llavero rosa",
     desc: "Una flor de limpiapipas perfecta para llevar a todos lados.",
     price: 3000,
+    image: "imagenes/Llavero rosa.jpg",
     color: "var(--pink)"
   },
   {
@@ -21,6 +29,16 @@ const PRODUCTS = [
     name: "Llavero girasol",
     desc: "Hermoso llavero de girasol hecho con limpiapipas y para todos",
     price: 5000,
+    image: "imagenes/Llavero Girasol.jpg",
+    color: "var(--yellow)"
+  },
+  {
+    id: "llav-3",
+    category: "Llaveros",
+    name: "Llavero margarita",
+    desc: "Una margarita muy colorida para llevar a todas partes",
+    price: 5000,
+    image: "imagenes/Llavero margaritas.jpg",
     color: "var(--yellow)"
   },
   {
@@ -29,6 +47,7 @@ const PRODUCTS = [
     name: "Caja plastica con girasol",
     desc: "Cajita plastica con un hermoso Girasol en su maceta",
     price: 22000,
+    image: "imagenes/Caja Plastica de Girasol.jpg",
     color: "var(--blue)"
   },
   {
@@ -37,6 +56,7 @@ const PRODUCTS = [
     name: "Ramo pequeño (8 flores)",
     desc: "Ocho flores de limpiapipas envueltas y listas para regalar.",
     price: 12000,
+    image: "imagenes/Ramo.jpg",
     color: "var(--pink)"
   },
   {
@@ -45,29 +65,32 @@ const PRODUCTS = [
     name: "Ramo grande (10 flores)",
     desc: "Diez flores, envoltura y moño incluidos.",
     price: 15000,
+    image: "imagenes/Ramo 2.jpg",
     color: "var(--yellow)"
   },
-    {
+  {
     id: "ramo-3",
     category: "Ramos de flores",
     name: "Ramo grande (12 flores)",
     desc: "Doce flores, perfectas para quien mas amas",
     price: 20000,
+    image: "imagenes/Ramo 1.jpg",
     color: "var(--blue)"
   },
   {
-    id: "Flor Individual",
+    id: "flor-individual",
     category: "Ramos de flores",
     name: "Flor Individual",
-    desc: " Tulipanes, Rosa, Lirio o Hibicus",
+    desc: "Tulipanes, Rosa, Lirio o Hibicus",
     price: 10000,
+    image: "imagenes/Flor individual.jpg",
     color: "var(--blue)"
   }
-
-  
 ];
 
-
+/* =========================================================
+   A partir de aquí ya no necesitas tocar nada.
+   ========================================================= */
 
 const money = (n) => "$" + n.toLocaleString("es-CO");
 
@@ -115,7 +138,7 @@ function renderProducts() {
     card.className = "product-card";
     card.innerHTML = `
       <div class="product-icon" style="background:${product.color}22">
-        ${flowerIconSVG(product.color)}
+        ${productMediaHTML(product)}
       </div>
       <div class="product-name">${product.name}</div>
       <div class="product-desc">${product.desc}</div>
@@ -140,6 +163,28 @@ function renderProducts() {
 
     productGrid.appendChild(card);
   });
+}
+
+function productMediaHTML(product) {
+  if (product.image) {
+    // onerror: si la foto no se encuentra (nombre mal escrito, no
+    // subida todavía, etc.) vuelve a mostrar el ícono dibujado
+    // para que la tarjeta nunca se vea rota.
+    return `<img src="${encodeURI(product.image)}" alt="${product.name}" loading="lazy"
+      onerror="this.replaceWith(iconFallback('${product.color}'))">`;
+  }
+  return flowerIconSVG(product.color);
+}
+
+function iconFallback(color) {
+  const wrapper = document.createElement("div");
+  wrapper.style.width = "100%";
+  wrapper.style.height = "100%";
+  wrapper.style.display = "flex";
+  wrapper.style.alignItems = "center";
+  wrapper.style.justifyContent = "center";
+  wrapper.innerHTML = flowerIconSVG(color);
+  return wrapper;
 }
 
 function flowerIconSVG(color) {
