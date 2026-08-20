@@ -12,6 +12,9 @@ const FAIR_INFO = "Feria de emprendimiento · Fecha y lugar por confirmar";
 // "image" es el nombre del archivo de foto (debe estar en la misma
 // carpeta que index.html). Si lo borras o no se encuentra el
 // archivo, se muestra un ícono dibujado en su lugar.
+//
+// IMPORTANTE: cada línea dentro de { ... } debe terminar en coma,
+// EXCEPTO la última línea de cada producto (la de "color").
 const PRODUCTS = [
   {
     id: "llav-1",
@@ -53,7 +56,7 @@ const PRODUCTS = [
     id: "ramo-1",
     category: "Ramos de flores",
     name: "Ramo pequeño (8 flores)",
-    desc: "Ocho flores de limpiapipas envueltas y listas para regalar.",
+    desc: "Ocho flores de limpiapipas envueltas y listas para regalar. (Azul claro, Rojo, Rosado, Morado)",
     price: 17000,
     image: "Ramo.jpg",
     color: "var(--pink)"
@@ -62,7 +65,7 @@ const PRODUCTS = [
     id: "ramo-2",
     category: "Ramos de flores",
     name: "Ramo grande (10 flores)",
-    desc: "Diez flores, envoltura y moño incluidos.",
+    desc: "Diez flores, envoltura y moño incluidos. (Azul claro, Rojo, Rosado, Morado)",
     price: 22000,
     image: "Ramo 2.jpg",
     color: "var(--yellow)"
@@ -71,7 +74,7 @@ const PRODUCTS = [
     id: "ramo-3",
     category: "Ramos de flores",
     name: "Ramo grande (12 flores)",
-    desc: "Doce flores, perfectas para quien mas amas",
+    desc: "Doce flores, perfectas para quien mas amas (Azul claro, Rojo, Rosado, Morado)",
     price: 26000,
     image: "Ramo 1.jpg",
     color: "var(--blue)"
@@ -80,7 +83,7 @@ const PRODUCTS = [
     id: "flor-individual",
     category: "Ramos de flores",
     name: "Flor Individual",
-    desc: "Tulipanes, Rosa, Lirio o Hibicus",
+    desc: "Tulipanes, Rosa, Lirio o Hibicus (naranja)",
     price: 10000,
     image: "Flor individual.jpg",
     color: "var(--blue)"
@@ -338,6 +341,11 @@ document.getElementById("newOrderBtn").addEventListener("click", () => {
   orderSuccess.hidden = true;
   orderForm.hidden = false;
 });
+
+/* ---------- Inicio ---------- */
+renderTabs();
+renderProducts();
+renderCart();
 
 /* ---------- Inicio ---------- */
 renderTabs();
