@@ -26,15 +26,6 @@ const PRODUCTS = [
     color: "var(--pink)"
   },
   {
-    id: "llav-2",
-    category: "Llaveros",
-    name: "Llavero girasol",
-    desc: "Hermoso llavero de girasol hecho con limpiapipas y para todos",
-    price: 5000,
-    image: "Llavero Girasol.jpg",
-    color: "var(--yellow)"
-  },
-  {
     id: "llav-3",
     category: "Llaveros",
     name: "Llavero margarita",
@@ -42,15 +33,6 @@ const PRODUCTS = [
     price: 4000,
     image: "Llavero margaritas.jpg",
     color: "var(--yellow)"
-  },
-  {
-    id: "maceta-1",
-    category: "Cajas con maceta",
-    name: "Caja plastica con girasol",
-    desc: "Cajita plastica con un hermoso Girasol en su maceta",
-    price: 23000,
-    image: "Caja Plastica de Girasol.jpg",
-    color: "var(--blue)"
   },
   {
     id: "ramo-1",
